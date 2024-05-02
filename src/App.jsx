@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import {
+	Button,
+	Card,
+	InputGroup,
+	Col,
+	Container,
+	Form,
+	Row,
+} from "react-bootstrap";
+import CardList from "./components/CardList";
 
 function App() {
-  const [count, setCount] = useState(0)
+	const [count, setCount] = useState(0);
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+	return (
+		<>
+			<Container fluid className="my-5 px-5">
+				<Row className="justify-content-center my-2">
+					<Col lg={2} className="text-center">
+						<h1>Pokedex</h1>
+					</Col>
+				</Row>
+				<Row className="justify-content-center">
+					<Col md={6} xs={12}>
+						<InputGroup>
+							<Form.Control
+								type="search"
+								placeholder="Search"
+								aria-label="Search"
+								size="lg"
+							/>
+
+							<Button  variant="outline-danger">Search</Button>
+						</InputGroup>
+					</Col>
+				</Row>
+
+				<CardList />
+			</Container>
+		</>
+	);
 }
 
-export default App
+export default App;
