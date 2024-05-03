@@ -38,35 +38,39 @@ const ElementalBadge = ({ element }) => {
 		dragon,
 		ice,
 		electric,
-		water
+		water,
 	};
-	const colors={
-		bug:"#90C12C",
-		poison:"#9141CB",
-		dark:"#624D4E",
-		normal:"#9FA19F",
-		fire:"#E62829",
-		grass:"#3FA129",
-		rock:"#AFA981",
-		steel:"#60A1B8",
-		flying:"#81B9EF",
-		fighting:"#FF8000",
-		ghost:"#704170",
-		ground:"#915121",
-		fairy:"#EF70EF",
-		psychic:"#EF4179",
-		dragon:"#5060E1",
-		ice:"#3DCEF3",
-		electric:"#FAC000",
-		water:"#2980EF"
-	}
+	const colors = {
+		bug: "#90C12C",
+		poison: "#9141CB",
+		dark: "#624D4E",
+		normal: "#9FA19F",
+		fire: "#E62829",
+		grass: "#3FA129",
+		rock: "#AFA981",
+		steel: "#60A1B8",
+		flying: "#81B9EF",
+		fighting: "#FF8000",
+		ghost: "#704170",
+		ground: "#915121",
+		fairy: "#EF70EF",
+		psychic: "#EF4179",
+		dragon: "#5060E1",
+		ice: "#3DCEF3",
+		electric: "#FAC000",
+		water: "#2980EF",
+	};
 	return (
 		<>
 			<Image
 				alt="poison"
 				src={icons[element]}
 				width="20px"
-				style={{ backgroundColor: `${colors[element]}`, padding: 4 }}
+				style={{
+					backgroundColor: `${colors[element]}`,
+					padding: 4,
+					marginLeft: 5,
+				}}
 				roundedCircle
 			/>
 		</>
